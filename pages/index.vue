@@ -8,10 +8,10 @@
 </script>
 
 <template>
-    <div class="filter"></div>
     <main >
-        
+        <div class="filter"></div>
         <div class="visible">
+            <div class="filter"></div>
             <div class="banner"></div>
             <section>
                 <h1>Paloma</h1>
@@ -42,7 +42,7 @@
             </div>
         </div>
     </main>
-    
+
     
 </template>
 
@@ -134,5 +134,35 @@ p{
     line-height: normal; 
     margin: 0px;
     padding-left: 10px;
+}
+
+/* Break point 672px */
+@media only screen and (max-width: 672px) {
+h1{
+    font-size: 60px;
+    margin-top: 133px;
+    margin-bottom: -20px;
+}
+h2{
+    font-size: 48px; 
+    margin-bottom: 122px;
+}
+h3{
+    font-size: 36px;
+    padding-right: 0;
+    padding-bottom: 148px;
+}
+p{
+    font-size: 20px; 
+}
+.banner{
+    width: 1000px;
+    height: 211px; 
+    top:210px;
+    right: 15%;
+}
+.contacts{
+    justify-content: center;
+}
 }
 </style>

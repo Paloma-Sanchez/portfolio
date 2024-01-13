@@ -1,3 +1,30 @@
+<script setup>
+    const beforeEnter = (el) => {
+        el.style.opacity = 0
+        el.style.transform = 'scale(0,0)'
+    }
+
+    const enter = (el, done) => {
+                gsap.to(el, {
+                    duration: 1,
+                    opacity: 1,
+                    scale: 1,
+                    onComplete: done
+                })
+    }
+
+    const mounted = () => {
+        gsap.from('li', {
+        duration: 0.5,
+        opacity: 0,
+        scale: 0,
+        y: 200,
+        ease: 'power1',
+        stagger: 0.1
+    })
+    }
+</script>
+
 <template>
     <main>
         <div class="visible">
@@ -32,6 +59,18 @@ li{
     font-size: 96px;
     font-style: normal;
     font-weight: 400;
+    opacity: 0;
+    animation: slide-up linear 0.4s ;
+    animation-fill-mode: both;
+}
+li:nth-child(1){
+    animation-delay: 0.2s;
+}
+li:nth-child(2){
+    animation-delay: 0.4s;
+}
+li:nth-child(3){
+    animation-delay: 0.6s;
 }
 ul{
     margin-top: 240px;
@@ -74,4 +113,24 @@ a:active {
     text-decoration: none; 
     color: #141E46;
 }
+@media only screen and (max-width: 672px) {
+    li{
+        font-size: 48px;
+    }
+}
+
+/*** TRANSITIONS ***/
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(25%);
+        
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        }
+  }
+
+
 </style>

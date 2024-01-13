@@ -25,7 +25,7 @@
 
 <template>
     <div :class="background" >
-        <Navbar/>
+        <Navbar :background="background"/>
         <slot/>
     </div>
 </template>

@@ -1,7 +1,8 @@
 <template>
-    <div class="filter"></div>  
     <main>
+        <div class="filter"></div> 
         <div class="visible">
+            <div class="filter"></div>
             <h1>/Projects</h1>
             <div class="grid">
 
@@ -10,7 +11,6 @@
         </div>
         
     </main>
-    
 </template>
 
 
@@ -30,5 +30,13 @@
 }
 .grid{
     display:grid;
+}
+@media only screen and (max-width: 672px) {
+h1{
+    font-size: 48px; 
+    margin-top: 64px;
+    text-align:center;    
+  }
+
 }
 </style>

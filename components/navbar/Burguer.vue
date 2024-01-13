@@ -1,9 +1,19 @@
+<script setup>
+
+const props = defineProps({
+    color:{
+        type: String,
+        required: true
+    }
+})
+</script>
+
 <template>
     <div>
         <div class="group">
-            <div class="navline margin-bottom"></div>
-            <div class="navline margin-bottom"></div>
-            <div class="navline"></div>
+            <div class="navline margin-bottom" :style="{ backgroundColor: color }"></div>
+            <div class="navline margin-bottom" :style="{ backgroundColor: color }"></div>
+            <div class="navline" :style="{ backgroundColor: color }"></div>
         </div>
     </div>
 </template>

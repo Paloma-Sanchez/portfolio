@@ -39,4 +39,30 @@ background: #14225B;
 top:166px;
 left: 652px;
 }
+@media only screen and (max-width: 672px) {
+.rect1{
+    width: 167px;
+    height: 155px; 
+}
+.rect2{
+    width: 333px;
+    height: 440px; 
+    top:155px;
+}
+.rect3{
+    width: 313px;
+    height: 223px; 
+    top: 38px;
+    left: 0;
+    
+}
+.rect4{
+    width: 170px;
+    height: 228px; 
+    left: 167px;
+    top: -73px;
+    
+}   
+
+}
 </style>
