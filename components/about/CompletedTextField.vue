@@ -1,11 +1,3 @@
-<script setup>
-/*<div>
-    
-</div>
-<div>
-    
-</div>*/
-</script>
 <template>
     <div class="relative padding-left">
         <p class="absolute p0">I'm a freelance front-end developper from Nantes,  France. In 2016 I </p>
@@ -18,14 +10,14 @@
             After finishing Codecademy's Front-End development course and several months of practicing what I had learned, I started freelancing  in December 2023.
         </p>
         <div class="photo absolute"></div>
-       <AboutTextfield/>
+       <AboutTextfield class="text-field"/>
     </div>
    
 </template>
 
 <style scoped>
 p{
-    color: #141E46;
+    color: var(--color-navbar-blue);
     font-family: Roundo;
     font-size: 28px;
     font-style: normal;
@@ -63,13 +55,19 @@ p{
     width: 213px;
     height: 279px;
     border-radius: 20px;
-    background: #14225B 50% / cover no-repeat;
+    background: var(--color-blue) 50% / cover no-repeat;
     background-image: url("../../assets/images/subject_3.png");
-    mix-blend-mode: lighten; 
+    
     top: 190px;
     left: 660px;
-    z-index: 10; 
+    z-index: 30; 
 }
+
+.text-field{
+    z-index: 0;
+    position: relative;
+}
+
 @media only screen and (max-width: 672px) {
 p{
     font-size: 18px; 

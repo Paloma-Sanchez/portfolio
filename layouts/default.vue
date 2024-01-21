@@ -1,9 +1,10 @@
 <script setup>
     const route = useRoute();
     const fullPath = computed(() => route.fullPath)
-    console.log('path', fullPath.value);
-
+    //console.log('path', fullPath.value);
     const background = ref('background-beige');
+
+    /* Choose backgorund color */
     watch(fullPath, () => {
         console.log('watch triggered');
         if(fullPath.value === '/about'){
@@ -19,7 +20,6 @@
             background.value = 'background-beige';
         }
     }, { immediate: true });
-
 
 </script>
 
@@ -37,7 +37,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color:#FFF5E0;
+    background-color: var(--color-beige);
 }
 .background-red{
     position: absolute;
@@ -45,7 +45,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color:#BB2525;
+    background-color: var(--color-red);
 }
 .background-blue{
     position: absolute;
@@ -53,7 +53,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color:#14225B;
+    background-color:var(--color-blue-about);
 }
 .background-salmon{
     position: absolute;
@@ -61,6 +61,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color:#FF6969;
+    background-color: var(--color-salmon);
 }
 </style>

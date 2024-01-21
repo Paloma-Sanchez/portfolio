@@ -1,3 +1,9 @@
+<script setup>
+    const colorMode = useColorMode()
+
+    console.log(colorMode.preference)
+</script>
+
 <template>
     <div class="relative">
         <div class="rect1"></div>
@@ -13,13 +19,14 @@
 width: 652px;
 height: 530px;
 border-radius: 20px;
-background-color: #FFF5E0;
+background-color: var(--color-beige);
 }
+
 .rect2{
 width: 864px;
 height: 166px;
 border-radius: 20px;
-background-color: #FFF5E0;
+background-color: var(--color-beige);
 top: 0;
 }
 
@@ -27,7 +34,7 @@ top: 0;
 width: 265px;
 height: 458px;
 border-radius: 20px;
-background: #FFF5E0;
+background: var(--color-beige);
 top:0px;
 left: 500px;
 }
@@ -35,7 +42,7 @@ left: 500px;
 width: 240px;
 height: 355px; 
 border-radius: 20px;
-background: #14225B;
+background: var(--color-blue);
 top:166px;
 left: 652px;
 }

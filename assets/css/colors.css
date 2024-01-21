@@ -1,0 +1,27 @@
+html {
+    --color-beige: #FFF5E0;
+    --color-navbar-beige: #FFF5E0;
+    --color-red: #BB2525;
+    --color-blue: #14225B;
+    --color-blue-about: #14225B;
+    --color-navbar-blue: #141E46;
+    --color-salmon: #FF6969;
+    --color-menu-bg: rgba(255, 245, 224, 0.7);
+    .photo{
+        mix-blend-mode: lighten;
+    }
+}
+
+.dark-mode{
+    --color-beige: #14225B;
+    --color-red:#5D1212;
+    --color-blue: #FFF5E0;
+    --color-blue-about: #0A1027;
+    --color-navbar-blue: #FFF5E0;
+    --color-salmon: #4C1F1F;
+    --color-menu-bg: #14225bc5;
+    .photo{
+        mix-blend-mode: normal;
+        opacity: 0.85 ;
+    }
+}

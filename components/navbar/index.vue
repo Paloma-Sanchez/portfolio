@@ -1,62 +1,76 @@
 <script setup>
-const openMenu = ref(false);
-const barColor = ref("#141E46");
-const src = ref("");
+    import LogoDark from '../../assets/svg/logo_dark.svg';
+    import LogoLight from '../../assets/svg/logo_white.svg';
+    import Moon from '../../assets/svg/moon.svg';
+    import Sun from '../../assets/svg/sun.svg'
+    const openMenu = ref(false);
+    const barColor = ref("#141E46");
+    const moonVisible = ref('');
 
-const props = defineProps({
-  background: {
-    type: String,
-    required: true,
-  },
-});
-//console.log('nav', props.background);
+    const props = defineProps({
+    background: {
+        type: String,
+        required: true,
+    },
+    });
+    
+    /*Choose navbar colors*/
+    watch([props, openMenu], () => {
+    console.log("navWatch", props.background);
+    if (props.background === "background-beige" || openMenu.value) {
+        barColor.value = "var(--color-navbar-blue)";
+    } else {
+        barColor.value = "var(--color-navbar-beige)";
 
-watch([props, openMenu], () => {
-  console.log("navWatch", props.background, openMenu.value);
-  if (props.background === "background-beige" || openMenu.value) {
-    barColor.value = "#141E46";
-    //src.value = "../../assets/images/logo_dark.svg";
-    //console.log('logo', src.value);
-  } else {
-    barColor.value = "#FFF5E0";
-    //src.value = '../../assets/images/logo_white.svg';
-    //console.log('logo', src.value);
-  }
-});
+    }
+    }, { immediate: true });
+
+    /*Color mode Nuxt*/
+    const colorMode = useColorMode();
+
+    onMounted(() => {
+      if(colorMode.preference === "light"){
+        moonVisible.value = true;
+      } else{
+        moonVisible.value = false;
+      } 
+    });
+
+    /*Toggle color mode*/
+    const handleOnClick = () => {
+      if(colorMode.preference === "light"){
+        colorMode.preference = "dark";
+        moonVisible.value = false;
+      } else{
+        colorMode.preference = "light";
+        moonVisible.value = true;
+      } 
+    }
 </script>
 
 <template>
   <nav>
     <div class="container">
       <NuxtLink to="/" class="nav-right" @click="() => (openMenu = false)">
-        <img
-          src="../../assets/images/logo_dark.svg"
-          v-if="props.background === 'background-beige'"
-        />
-        <img
-          src="../../assets/images/logo_white.svg"
-          v-if="props.background !== 'background-beige'"
-        />
+        <template v-if="(props.background === 'background-beige' && colorMode.preference !== 'dark') || (openMenu && colorMode.preference !== 'dark') ">
+          <LogoDark class="logo" />  
+        </template>
+        <template v-else>
+          <LogoLight class="logo" />
+        </template>
+        
       </NuxtLink>
 
       <div class="nav-right">
         <div class="nav-widget">
           <button class="nav-btn" :style="{ color: barColor }">EN</button>
-          <button class="nav-btn">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9.94 4.485C8.31 12.025 13.69 16.895 17.6 18.285C16.21 19.375 14.48 19.995 12.67 19.995C8.26 
-                        19.995 4.67 16.405 4.67 11.995C4.67 8.545 6.87 5.595 9.94 4.485ZM12.66 2.005C7.07 2.005 2.67 6.535 2.67 
-                        11.995C2.67 17.515 7.15 21.995 12.67 21.995C16.38 21.995 19.6 19.975 21.33 16.975C13.82 16.725 9.24 8.545 13.01 2.005H12.66Z"
-                :fill="`${barColor}`"
-              />
-            </svg>
+          <button class="nav-btn" @click="handleOnClick">
+            <template v-if="moonVisible">
+                <Moon class="color-mode-svg" :style="`fill:${barColor}`"/>
+            </template>
+            <template v-else>
+                <Sun class="color-mode-svg2"/>
+            </template>
           </button>
         </div>
         <NavbarBurguer
@@ -73,12 +87,12 @@ watch([props, openMenu], () => {
 </template>
 
 <style>
-/*** TRANSITIONS ***/
-.slide-left-enter-active {
-  transition: all 0.27s linear;
-}
-.slide-left-from {
-  transform: translateX(100%);
+.color-mode-svg2 {
+  width: 24px; 
+  height: 24px; 
+  path{
+    fill: var(--color-navbar-beige);
+    }
 }
 </style>
 
@@ -99,6 +113,10 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.logo{
+  width:46px;
+  height:38px;
+}
 .nav-right {
   display: flex;
   align-items: center;
@@ -112,10 +130,19 @@ nav {
   justify-content: space-between;
   padding-right: 58px;
 }
+.color-mode-svg{
+  width: 24px; 
+  height: 24px; 
+}
+.color-mode-svg2{
+  width: 24px; 
+  height: 24px; 
+}
+
 .nav-btn {
   background: transparent;
   border: none;
-  font-family: Rounded Mplus 1c;
+  font-family: "M PLUS Rounded 1c";
   font-size: 22px;
   padding: 0;
   cursor: pointer;
@@ -127,7 +154,7 @@ nav {
 .nav-menu {
   position: fixed;
   inset: 0;
-  background: rgba(255, 245, 224, 0.7);
+  background: var(--color-menu-bg);
   backdrop-filter: blur(20px);
   z-index: 2000;
   animation: mymove linear 0.5s;
