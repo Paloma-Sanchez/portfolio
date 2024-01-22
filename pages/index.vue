@@ -6,8 +6,6 @@
 <template>
     <main>
         <div class="visible">
-            <div class="filter"></div>
-            <div class="filter"></div>
             <div class="banner"></div>
             <section>
                 <h1>Paloma</h1>
@@ -70,7 +68,7 @@ h3{
 .banner{
     display: flex;
     border-radius: 500px;
-    background: rgba(228, 195, 125, 0.30);
+    background: var(--color-banner-beige);
     background-blend-mode: color-burn; 
     width: 5000px;
     height: 338px; 

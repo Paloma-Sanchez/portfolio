@@ -1,6 +1,7 @@
 html {
     --color-beige: #FFF5E0;
     --color-navbar-beige: #FFF5E0;
+    --color-banner-beige: rgba(228, 195, 125, 0.30);
     --color-red: #BB2525;
     --color-blue: #14225B;
     --color-blue-about: #14225B;
@@ -14,6 +15,7 @@ html {
 
 .dark-mode{
     --color-beige: #14225B;
+    --color-banner-beige: rgba(26, 46, 158, 0.2);
     --color-red:#5D1212;
     --color-blue: #FFF5E0;
     --color-blue-about: #0A1027;
@@ -25,3 +27,4 @@ html {
         opacity: 0.85 ;
     }
 }
+/*rgba(26, 30, 158, 0.2);*/

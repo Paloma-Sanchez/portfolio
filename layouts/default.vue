@@ -23,7 +23,7 @@
 </script>
 
 <template>
-    <div :class="background" >
+    <div :class="background"  class="filter">
         <Navbar :background="background"/>
         <slot/>
     </div>
@@ -31,35 +31,19 @@
 
 <style >
 .background-beige{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background-image: url('../assets/images/background_sand.jpg'), url('../assets/images/background_sand.jpg');
     background-color: var(--color-beige);
 }
 .background-red{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background-image: url('../assets/images/background_sand.jpg'), url('../assets/images/background_sand.jpg');
     background-color: var(--color-red);
 }
 .background-blue{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background-image: url('../assets/images/background_sand.jpg'), url('../assets/images/background_sand.jpg');
     background-color:var(--color-blue-about);
 }
 .background-salmon{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--color-salmon);
+    background-image: url('../assets/images/background_sand.jpg'), url('../assets/images/background_sand.jpg');
+    background-color:  var(--color-salmon);
 }
 </style>

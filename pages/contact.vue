@@ -2,9 +2,7 @@
     <div>
      
     <main>
-        <div class="filter"></div> 
         <div class="visible">
-            <div class="filter"></div>
             <h1>/{{ $t("contact.title")}}</h1>
             <p>{{ $t("contact.p")}}</p>
             <p class="email"><strong>Email:</strong>  </p>
