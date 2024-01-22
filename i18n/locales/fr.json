@@ -1,0 +1,25 @@
+{
+    "menu":{
+        "cat1": "A propos",
+        "cat2": "Projets",
+        "cat3": "Contacter"
+    },
+    "home":{
+        "title1": "Développeuse",
+        "title2": "Web",
+        "title3": "Front-End",
+        "availability": "disponible pour missions en freelance"
+    },
+    "about":{
+        "title": "A propos"
+       
+    },
+    "projects":{
+        "title": "Projets"
+    },
+    "contact":{
+        "title": "Contactez-moi",
+        "p": "On travaille ensemble sur un projet?"
+    }
+
+}

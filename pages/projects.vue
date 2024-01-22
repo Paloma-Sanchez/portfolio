@@ -3,7 +3,7 @@
         <div class="filter"></div> 
         <div class="visible">
             <div class="filter"></div>
-            <h1>/Projects</h1>
+            <h1>/{{ $t("projects.title")}}</h1>
             <div class="grid">
 
             </div>

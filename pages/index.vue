@@ -1,5 +1,6 @@
 <script setup>
 const colorMode = useColorMode();
+
 </script>
 
 <template>
@@ -15,12 +16,12 @@ const colorMode = useColorMode();
             </section>
             
             <section>
-                <h3>Front-End <br/> Web <br/> Developer</h3>
+                <h3>{{ $t("home.title1")}} <br/> {{ $t("home.title2")}} <br/> {{ $t("home.title3")}}</h3>
             </section>
             <div>
                 <div class="contacts">
                     <div class="green-circle"></div>
-                    <p>available for freeleance work</p>
+                    <p>{{ $t("home.availability")}}</p>
                 </div>
                 <div class="contacts">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mail-svg">

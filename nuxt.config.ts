@@ -23,7 +23,24 @@ export default defineNuxtConfig({
     defaultImport: 'component'
   },
   i18n: {
-    vueI18n: './i18n.config.ts' // if you are using custom path, default 
+    
+    lazy:true,
+    langDir: './i18n/locales',
+    strategy: "prefix_except_default",
+    locales:[
+      {
+        code:"en",
+        name:"English",
+        file: "en.json"
+      },
+      {
+        code:"fr",
+        name:"Francais",
+        file: "fr.json"
+      }
+    ],
+    defaultLocale:"en"
+
   },
   build: {
     transpile: ['nuxt-gsap'],

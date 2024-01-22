@@ -5,8 +5,8 @@
         <div class="filter"></div> 
         <div class="visible">
             <div class="filter"></div>
-            <h1>/Get in touch</h1>
-            <p >Want to work together on a project?</p>
+            <h1>/{{ $t("contact.title")}}</h1>
+            <p>{{ $t("contact.p")}}</p>
             <p class="email"><strong>Email:</strong>  </p>
             <p class="email-body"> karpaloma@hotmail.com</p>
         </div>

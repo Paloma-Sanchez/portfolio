@@ -11,9 +11,9 @@
     <main>
         <div class="visible">
             <ul class="z-top">
-                <li class="li-padding-bottom" @click="$emit('closeMenu')"><NuxtLink to="/about" >/About</NuxtLink></li>
-                <li class="li-padding-bottom" @click="$emit('closeMenu')"><NuxtLink to="/projects">/Projects</NuxtLink></li>
-                <li><NuxtLink to="/contact" @click="$emit('closeMenu')">/Contact</NuxtLink></li>
+                <li class="li-padding-bottom" @click="$emit('closeMenu')"><NuxtLink to="/about" >/{{ $t("menu.cat1")}}</NuxtLink></li>
+                <li class="li-padding-bottom" @click="$emit('closeMenu')"><NuxtLink to="/projects">/{{ $t("menu.cat2")}}</NuxtLink></li>
+                <li><NuxtLink to="/contact" @click="$emit('closeMenu')">/{{ $t("menu.cat3")}}</NuxtLink></li>
             </ul>
             <div class="flex mail-block">
                 <p class="email">karpaloma@hotmail.com</p>

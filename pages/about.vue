@@ -7,7 +7,7 @@
         <div class="filter"></div>  
         <div class="visible">
             <div class="filter"></div>
-            <h1 class="about-title">/About</h1>
+            <h1 class="about-title">/{{ $t("about.title")}}</h1>
             <div class="center">
                 <AboutCompletedTextField />
             </div>
