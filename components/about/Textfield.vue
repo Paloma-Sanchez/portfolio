@@ -43,6 +43,7 @@ width: 240px;
 height: 355px; 
 border-radius: 20px;
 background: var(--color-blue);
+opacity: 1;
 top:166px;
 left: 652px;
 }
@@ -53,7 +54,7 @@ left: 652px;
 }
 .rect2{
     width: 333px;
-    height: 440px; 
+    height: 455px; 
     top:155px;
 }
 .rect3{

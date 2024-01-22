@@ -6,6 +6,7 @@
     const openMenu = ref(false);
     const barColor = ref("#141E46");
     const moonVisible = ref('');
+    const localPath = useLocalePath();
 
     const props = defineProps({
     background: {
@@ -46,24 +47,25 @@
         moonVisible.value = true;
       } 
     }
+
+    //<button class="nav-btn" :style="{ color: barColor }">EN</button>
 </script>
 
 <template>
   <nav>
     <div class="container">
-      <NuxtLink to="/" class="nav-right" @click="() => (openMenu = false)">
+      <NuxtLink :to="localPath('/')" class="nav-right" @click="() => (openMenu = false)">
         <template v-if="(props.background === 'background-beige' && colorMode.preference !== 'dark') || (openMenu && colorMode.preference !== 'dark') ">
           <LogoDark class="logo" />  
         </template>
         <template v-else>
           <LogoLight class="logo" />
         </template>
-        
       </NuxtLink>
 
       <div class="nav-right">
         <div class="nav-widget">
-          <button class="nav-btn" :style="{ color: barColor }">EN</button>
+          <NavbarLangSwitcher :color="barColor"/>
           <button class="nav-btn" @click="handleOnClick">
             <template v-if="moonVisible">
                 <Moon class="color-mode-svg" :style="`fill:${barColor}`"/>
@@ -129,6 +131,7 @@ nav {
   width: 85px;
   justify-content: space-between;
   padding-right: 58px;
+  
 }
 .color-mode-svg{
   width: 24px; 

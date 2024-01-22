@@ -34,6 +34,16 @@ p{
     padding-top: 56px;
    
 }
+/*REACTIVE 830px*/
+@media only screen and (max-width: 830px) {
+    h1{
+        font-size: 105px; 
+        margin-top: 64px;
+        text-align:center;    
+      }
+}
+
+/*REACTIVE 672px*/
 @media only screen and (max-width: 672px) {
     h1{
         font-size: 48px; 

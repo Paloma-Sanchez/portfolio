@@ -45,6 +45,7 @@ h1{
 
 .about-title{
     padding-left:21px;
+    mix-blend-mode: difference;
     
 }
 }

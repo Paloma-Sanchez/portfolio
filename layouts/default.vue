@@ -1,20 +1,19 @@
 <script setup>
     const route = useRoute();
-    const fullPath = computed(() => route.fullPath)
-    //console.log('path', fullPath.value);
+    const fullPath = computed(() => route.fullPath);
+    
     const background = ref('background-beige');
 
     /* Choose backgorund color */
     watch(fullPath, () => {
+        console.log('path', fullPath.value);
         console.log('watch triggered');
-        if(fullPath.value === '/about'){
+        if(fullPath.value === '/about' || fullPath.value === '/fr/about'){
             background.value = 'background-blue';
-            console.log('about received');
-            console.log(background.value)
-        }else if(fullPath.value ==='/projects'){
+        }else if(fullPath.value ==='/projects' || fullPath.value ==='/fr/projects'){
             background.value = 'background-red';
         }
-        else if(fullPath.value ==='/contact'){
+        else if(fullPath.value ==='/contact' || fullPath.value ==='/fr/contact'){
             background.value = 'background-salmon';
         }else {
             background.value = 'background-beige';

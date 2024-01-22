@@ -1,11 +1,10 @@
 <script setup>
-const colorMode = useColorMode();
-
+    import EmailIcon from '../../assets/svg/email_icon.svg';
+    const colorMode = useColorMode();
 </script>
 
 <template>
-    <main >
-       
+    <main>
         <div class="visible">
             <div class="filter"></div>
             <div class="filter"></div>
@@ -24,38 +23,15 @@ const colorMode = useColorMode();
                     <p>{{ $t("home.availability")}}</p>
                 </div>
                 <div class="contacts">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mail-svg">
-                        <g clip-path="url(#clip0_16_206)">
-                            <path 
-                                d="M20 4C21.0544 4 21.9182 4.81588 21.9945 5.85074L22 6V18C22 19.0544 21.1841 19.9182 20.1493 19.9945L20 
-                                20H4C2.94564 20 2.08183 19.1841 2.00549 18.1493L2 18V17H4V18H20V7.41437L13.0607 14.3536C12.5116 14.9028 
-                                11.6425 14.9371 11.0533 14.4566L10.9394 14.3536L4 7.41421V8H2V6C2 4.94564 2.81588 4.08183 3.85074 4.00549L4 
-                                4H20ZM6 13C6.55228 13 7 13.4477 7 14C7 14.5523 6.55228 15 6 15H1C0.447715 15 0 14.5523 0 14C0 13.4477 0.447715 
-                                13 1 13H6ZM18.5859 6H5.41421L12.0001 12.5859L18.5859 6ZM5 10C5.55228 10 6 10.4477 6 11C6 11.5128 5.61396 11.9355 
-                                5.11662 11.9933L5 12H2C1.44772 12 1 11.5523 1 11C1 10.4871 1.38604 10.0645 1.88338 10.0067L2 10H5Z" 
-                                fill="var(--color-blue)"
-                            />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_16_206">
-                            <rect width="24" height="24" fill="white"/>
-                          </clipPath>
-                        </defs>
-                    </svg>
+                    <EmailIcon class="svg"/>
                     <p>karpaloma@hotmail.com</p>
                 </div>
             </div>
         </div>
-    </main>
-
-    
+    </main>  
 </template>
 
 <style scoped>
-.visible{
-    width: 1040px;
-}
-
 h1{
     color: var(--color-navbar-blue);
     font-family: Chonburi;
@@ -125,10 +101,13 @@ p{
     margin: 0px;
     padding-left: 10px;
 }
+.svg{
+    width:24px;
+    height:24px; 
+}
 
 
-
-/* Break point 672px */
+/* Reactive break point width 672px */
 @media only screen and (max-width: 672px) {
 h1{
     font-size: 60px;
@@ -137,12 +116,12 @@ h1{
 }
 h2{
     font-size: 48px; 
-    margin-bottom: 122px;
+    margin-bottom: 112px;
 }
 h3{
     font-size: 36px;
     padding-right: 0;
-    padding-bottom: 148px;
+    padding-bottom: 75px;
 }
 p{
     font-size: 20px; 
@@ -155,6 +134,47 @@ p{
 }
 .contacts{
     justify-content: center;
+}
+}
+/* Reactive break point width 672px */
+@media only screen and (max-height: 925px) and (min-width: 672px){
+.banner{
+    top:170px;
+    height: 300px;
+}
+h1{
+    font-size: 96px;
+    margin-top: 100px;
+    margin-bottom: -35px;
+}
+h2{
+    font-size: 76px; 
+    margin-bottom: 100px;
+}
+h3{
+    font-size: 50px;
+    padding-right: 0;
+    padding-bottom: 50px;
+}
+}
+
+@media only screen and (max-height: 925px) and (min-width: 672px){
+.banner{
+    top:130px;
+}
+h1{
+    font-size: 105px;
+    margin-top: 60px;
+    margin-bottom: -35px;
+}
+h2{
+    font-size: 76px; 
+    margin-bottom: 80px;
+}
+h3{
+    font-size: 48px;
+    padding-right: 0;
+    padding-bottom:30px;
 }
 }
 

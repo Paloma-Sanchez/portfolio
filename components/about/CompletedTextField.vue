@@ -1,14 +1,9 @@
 <template>
     <div class="relative padding-left">
-        <p class="absolute p0">I'm a freelance front-end developper from Nantes,  France. In 2016 I </p>
-        <p class="absolute p1"> graduated from the National Institue of 
-            Applied Sciences (INSA) in Lyon and got my Engineering Degree in Mechanics.</p>
-       <p class="absolute p2">
-           After 6 years working in the fields of luxury goods and automobiles, I decided to follow my passion and become a web developer.
-       </p>
-       <p class="absolute p3">
-            After finishing Codecademy's Front-End development course and several months of practicing what I had learned, I started freelancing  in December 2023.
-        </p>
+        <p class="absolute p0">{{$t("about.p0")}} </p>
+        <p class="absolute p1">{{$t("about.p1")}}</p>
+       <p class="absolute p2">{{$t("about.p2")}}</p>
+       <p class="absolute p3">{{$t("about.p3")}}</p>
         <div class="photo absolute"></div>
        <AboutTextfield class="text-field"/>
     </div>
@@ -57,7 +52,7 @@ p{
     border-radius: 20px;
     background: var(--color-blue) 50% / cover no-repeat;
     background-image: url("../../assets/images/subject_3.png");
-    
+    opacity: 0.8;
     top: 190px;
     left: 660px;
     z-index: 30; 
@@ -85,7 +80,7 @@ p{
     top: 130px;
 }
 .p2{
-    top:291px;
+    top:280px;
     width: 305px; 
     text-align: left;
     margin-left: 12px;
