@@ -6,4 +6,23 @@
     font-display: swap;
   }
 
+  body, 
+  html,
+  #__nuxt,
+  #__layout{
+    margin: 0;
   
+  } 
+
+  h1.page{
+    color: #FFF5E0;
+    text-align: left;
+    font-family: Chonburi;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    position: relative;
+    z-index: 1;
+    transition: font-size 0.3s ease-out;
+}

@@ -4,40 +4,27 @@
 
 <template>
     <main id="main">
-        <div class="filter"></div>  
+        
         <div class="visible">
-            <div class="filter"></div>
-            <h1 class="about-title">/{{ $t("about.title")}}</h1>
-            <div class="center">
-                <AboutCompletedTextField />
-            </div>
+            
+            <h1 class="about-title page">/{{ $t("about.title")}}</h1>
+            
+            <AboutCompletedTextField />
+            
         </div>
         
     </main>   
 </template>
 
-<style>
-
-
-h1{
-    color: #FFF5E0;
-    text-align: left;
-    font-family: Chonburi;
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal; 
-    position: relative;
-    z-index: 1;
-    
-}
-</style>
 
 <style scoped>
+@media only screen and (max-width: 900px) {
+    h1{
+        text-align: center;  
+    }
+}
 
-
-
-@media only screen and (max-width: 672px) {
+@media only screen and (max-width: 696px) {
 h1{
     font-size: 48px;  
     

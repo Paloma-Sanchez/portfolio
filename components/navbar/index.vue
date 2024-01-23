@@ -38,7 +38,7 @@
     });
 
     /*Toggle color mode*/
-    const handleOnClick = () => {
+    const handleOnClickColorMode = () => {
       if(colorMode.preference === "light"){
         colorMode.preference = "dark";
         moonVisible.value = false;
@@ -48,13 +48,25 @@
       } 
     }
 
-    //<button class="nav-btn" :style="{ color: barColor }">EN</button>
+    /*Open Menu*/
+    const handleOnClickOpenMenu = () => {
+      const line1 = document.getElementById("navline1");
+      const line2 = document.getElementById("navline2");
+      const line3 = document.getElementById("navline3");
+
+      openMenu.value = !openMenu.value;
+      line1.classList.toggle('a');
+      line2.classList.toggle('b');
+      line3.classList.toggle('c');
+    }
+
+    /**/
 </script>
 
 <template>
   <nav>
     <div class="container">
-      <NuxtLink :to="localPath('/')" class="nav-right" @click="() => (openMenu = false)">
+      <NuxtLink :to="localPath('/')" class="nav-right" @click="openMenu? handleOnClickOpenMenu() :''">
         <template v-if="(props.background === 'background-beige' && colorMode.preference !== 'dark') || (openMenu && colorMode.preference !== 'dark') ">
           <LogoDark class="logo" />  
         </template>
@@ -66,7 +78,7 @@
       <div class="nav-right">
         <div class="nav-widget">
           <NavbarLangSwitcher :color="barColor"/>
-          <button class="nav-btn" @click="handleOnClick">
+          <button class="nav-btn" @click="handleOnClickColorMode">
             <template v-if="moonVisible">
                 <Moon class="color-mode-svg" :style="`fill:${barColor}`"/>
             </template>
@@ -76,7 +88,7 @@
           </button>
         </div>
         <NavbarBurguer
-          @click="() => (openMenu = !openMenu)"
+          @click="handleOnClickOpenMenu"
           class="burguer"
           :color="barColor"
         />
@@ -84,7 +96,7 @@
     </div>
   </nav>
   <div class="nav-menu" v-show="openMenu">
-    <NavbarMenu @closeMenu="() => (openMenu = !openMenu)" />
+    <NavbarMenu @closeMenu="handleOnClickOpenMenu" />
   </div>
 </template>
 
@@ -161,6 +173,7 @@ nav {
   backdrop-filter: blur(20px);
   z-index: 2000;
   animation: mymove linear 0.5s;
+  overflow: scroll;
 }
 
 /*** TRANSITIONS ***/

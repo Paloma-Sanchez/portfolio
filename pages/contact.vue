@@ -1,21 +1,17 @@
 <template>
     <div>
-     
-    <main>
-        <div class="visible">
-            <h1>/{{ $t("contact.title")}}</h1>
-            <p>{{ $t("contact.p")}}</p>
-            <p class="email"><strong>Email:</strong>  </p>
-            <p class="email-body"> karpaloma@hotmail.com</p>
-        </div>
-    </main>
+        <main>
+            <div class="visible">
+                <h1 class="page">/{{ $t("contact.title")}}</h1>
+                <p>{{ $t("contact.p")}}</p>
+                <p class="email"><strong>Email:</strong>  </p>
+                <p class="email-body"> karpaloma@hotmail.com</p>
+            </div>
+        </main>
     </div>
 </template>
 
-
-
 <style scoped>
-
 .grid{
     display:grid;
 }
@@ -23,14 +19,11 @@ p{
     color: #FFF;
     font-family: Roundo;
     font-size: 48px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal; 
     text-align: center;  
 }
 .email{
     padding-top: 56px;
-   
 }
 /*REACTIVE 830px*/
 @media only screen and (max-width: 830px) {
@@ -41,8 +34,8 @@ p{
       }
 }
 
-/*REACTIVE 672px*/
-@media only screen and (max-width: 672px) {
+/*REACTIVE 696px*/
+@media only screen and (max-width: 696px) {
     h1{
         font-size: 48px; 
         margin-top: 64px;

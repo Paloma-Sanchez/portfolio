@@ -23,31 +23,19 @@ main{
 .absolute{
   position: absolute;
 }
-body, 
-html,
-#nuxt{
-  margin: 0;
-  height: 100%;
-}
+
 
 .filter{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-blend-mode: multiply;
-  
-  
+
 
 }
 
-@media only screen and (max-width: 672px) {
+@media only screen and (max-width: 696px) {
   .visible{
     max-width: 350px;
   }
- 
 }
+
 
 /***PAGE TRANSITIONS***/
 .page-enter-active {

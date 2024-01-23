@@ -89,7 +89,7 @@ a:active {
     text-decoration: none; 
     color: var(--color-navbar-blue);
 }
-@media only screen and (max-width: 672px) {
+@media only screen and (max-width: 696px) {
     li{
         font-size: 48px;
     }
