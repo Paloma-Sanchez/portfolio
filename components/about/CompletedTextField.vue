@@ -1,14 +1,16 @@
 <template>
     
-    <div class="relative padding-left">
+    <div class="relative padding-left center">
         <p class="absolute p0">{{$t("about.p0")}} </p>
         <p class="absolute p1">{{$t("about.p1")}}</p>
        <p class="absolute p2">{{$t("about.p2")}}</p>
        <p class="absolute p3">{{$t("about.p3")}}</p>
-        <div class="photo absolute"></div>
+       <div class="photo absolute"></div>
+    </div> 
+       
         <div class="">
        <AboutTextfield class="text-field"/>
-    </div>
+    
            
     </div>
 </template>
@@ -17,38 +19,35 @@
 p{
     color: var(--color-navbar-blue);
     font-family: Roundo;
-    font-size: 28px;
-    font-style: normal;
+    font-size: 26px;
     font-weight: 400;
-    line-height: normal;
     z-index: 100; 
-    margin-left: 46px;
-    
-    }
+}
 .p0{
     width: 775px; 
     margin-top: 32px;
     break-after: avoid;
     display: inline-block;
+    margin-left: 46px;
 }    
 .p1{
     width: 775px; 
     margin-top: 32px;
     top:65px;
     display: inline-block;
+    margin-left: 46px;
 }
-
 .p2{
-    top:206px;
-    width: 584px; 
-    text-align: right;
-    margin-left: 20px;
-    
+    width: 580px; 
+    top:190px;
+    padding-right: 145px;
 }
 .p3{
     top:340px;
-    width: 584px; 
+    width: 584px;
+    padding-right: 145px;
 }
+/*760px;*/
 .photo{
     width: 213px;
     height: 279px;
@@ -56,8 +55,8 @@ p{
     background: var(--color-blue) 50% / cover no-repeat;
     background-image: url("../../assets/images/subject_3.png");
     opacity: 0.8;
-    top: 190px;
-    left: 660px;
+    top: 215px;
+    margin-left: 700px;
     z-index: 30; 
 }
 
@@ -75,29 +74,34 @@ p{
         
     }
     .p0{
-        width: 469px; 
+        width: 449px; 
         margin-top: 32px;
         top:10px;
+        padding-right: 167px;
+        margin-left: 12px;
     }  
     .p1{
         margin-top: 38px;
         width: 620px; 
         top: 130px;
+        margin-left: 12px;
     }
     .p2{
         top:280px;
         width: 620px; 
         text-align: left;
         margin-left: 12px;
+        padding-right: 0px;
     }
     .p3{
         width: 620px; 
         top:434px;
+        padding-right: 0px;
     }
     .photo{
         width: 147px;
         height: 192px; 
-        left: 500px;
+        margin-right: 200px;
         top: -60px;
     }
     .padding-left{
@@ -109,34 +113,39 @@ p{
 @media only screen and (max-width: 696px) {
 p{
     font-size: 18px; 
-    margin-left: 12px;
+    margin-left: 0px;
    line-height: 1.4;
 }
 .p0{
     width: 140px; 
-    margin-top: 32px;
+    margin-top: 20px;
     top:10px;
+    margin-right: 10px;
 }  
 .p1{
-    margin-top: 38px;
-    width: 313px; 
+    margin-top: 42px;
+    width: 300px; 
     top: 130px;
+    padding-right: 16px;
 }
 .p2{
-    top:280px;
-    width: 305px; 
+    top:284px;
+    width: 300px; 
     text-align: left;
     margin-left: 12px;
+    margin-left: 0px;
 }
 .p3{
-    width: 305px; 
+    width: 300px; 
     top:434px;
+    margin-left: 12px;
+    margin-left: 0px;
 }
 .photo{
     width: 147px;
     height: 192px; 
-    left: 178px;
-    top: -60px;
+    margin-right: 530px;
+    top: -40px;
 }
 .padding-left{
     padding-left: 8px;;
